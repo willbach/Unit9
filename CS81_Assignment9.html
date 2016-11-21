@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CS81 Unit 9, William Galebach</title>
+</head>
+<body>
+  <h1 type="button" id="title">Hello World</h1>
+  <p id="paragraph"><strong>We</strong> have just started <strong>this</strong> section for the users (<strong>beginner</strong>
+    to intermediate) who want to work with <strong>various</strong> JavaScript <strong>problems</strong> and write 
+    scripts online to <strong>test</strong> their JavaScript <strong>skill</strong>.
+  </p>
+  
+
+  <script>
+    var title = document.getElementById('title');
+    title.onclick = function() {
+      var titleText = title.innerHTML;
+      titleText = titleText === "Hello World" ? "Good Night World" : "Hello World";
+      title.innerHTML = titleText;
+    }
+    var paragraph = document.getElementById("paragraph");
+    var words = document.getElementsByTagName('strong');
+    for(var i = 0; i < words.length; i++) {
+      words[i].style.fontWeight = 'normal';
+    }
+    paragraph.onmouseover = function() {
+      for(var i = 0; i < words.length; i++) {
+        words[i].style.color = 'red';
+      }
+    }
+
+  </script>
+</body>
+</html>
